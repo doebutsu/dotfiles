@@ -1,0 +1,11 @@
+#waybar {
+    font-family: IosevkaTermNerdFont;
+    font-weight: 500;
+    font-size: 15;
+    color: #abb2bf;
+    background: rgba(35, 39, 46, 0.75);
+}
+
+#language, #pulseaudio {
+    margin-right: 15px;
+}

@@ -1,0 +1,24 @@
+{
+    "height": 30,
+    "modules-center": ["custom/clock"],
+    "modules-right": ["sway/language", "pulseaudio"],
+
+    "custom/clock": {
+        "format": "{}",
+        "interval": 1,
+        "exec": "date '+%a, %d %B %H:%M'"
+    },
+
+    "sway/language": {
+        "format": "  {}",
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "tooltip": false,
+        "format": "{icon} {volume}%",
+        "format-icons": {
+            "default": [" ", " ", " "]
+        }
+    }
+}

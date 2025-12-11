@@ -1,0 +1,84 @@
+input * {
+    xkb_layout us,ru
+    xkb_options grp:win_space_toggle
+}
+
+output * {
+    mode 1920x1080@144Hz
+    bg $HOME/Pictures/Wallpaper.jpg fill
+}
+
+bar swaybar_command waybar
+
+seat seat0 xcursor_theme "Ellen-Joe"
+exec_always {
+    gsettings set org.gnome.desktop.interface cursor-theme "Ellen-Joe"
+}
+
+font Iosevka 15
+tiling_drag disable
+
+smart_gaps on
+gaps inner 10
+gaps outer 5
+
+smart_borders on
+default_border pixel 3
+
+client.focused #abb2bf #abb2bf #23272e #000000 #abb2bfbf
+client.focused_inactive #333333 #5f676a #abb2bf #000000 #23272ebf
+client.unfocused #23272ebf #23272ebf #abb2bf #000000 #23272ebf
+client.urgent #2f343a #900000 #abb2bf #000000 #23272ebf
+
+
+bindsym mod4+return exec kitty
+bindsym --to-code mod4+v exec gnome-boxes
+bindsym --to-code mod4+b exec firefox --profile $HOME/.mozilla/firefox/profile.base
+bindsym print exec grim $HOME/Pictures/screenshot_$(date +%Y-%m-%d_%H-%M-%S).png && wl-copy < $HOME/Pictures/screenshot_$(date +%Y-%m-%d_%H-%M-%S).png
+
+bindsym --to-code mod4+shift+w layout toggle tabbed split
+bindsym --to-code mod4+shift+space floating toggle
+
+bindsym --to-code mod4+f fullscreen
+bindsym --to-code mod4+shift+q kill
+bindsym --to-code mod4+shift+c reload
+
+bindsym mod4+up focus up
+bindsym mod4+shift+up move up
+bindsym mod4+down focus down
+bindsym mod4+shift+down move down
+bindsym mod4+left focus left
+bindsym mod4+shift+left move left
+bindsym mod4+right focus right
+bindsym mod4+shift+right move right
+
+bindsym --to-code mod4+alt+up move up 50 px
+bindsym --to-code mod4+control+up resize grow height 50 px
+
+bindsym --to-code mod4+alt+down move down 50 px
+bindsym --to-code mod4+control+down resize shrink height 50 px
+
+bindsym --to-code mod4+alt+left move left 50 px
+bindsym --to-code mod4+control+left resize grow width 50 px
+
+bindsym --to-code mod4+alt+right move right 50 px
+bindsym --to-code mod4+control+right resize shrink width 50 px
+
+bindsym mod4+1 workspace number 1
+bindsym mod4+shift+1 move container to workspace number 1
+bindsym mod4+2 workspace number 2
+bindsym mod4+shift+2 move container to workspace number 2
+bindsym mod4+3 workspace number 3
+bindsym mod4+shift+3 move container to workspace number 3
+bindsym mod4+4 workspace number 4
+bindsym mod4+shift+4 move container to workspace number 4
+bindsym mod4+5 workspace number 5
+bindsym mod4+shift+5 move container to workspace number 5
+bindsym mod4+6 workspace number 6
+bindsym mod4+shift+6 move container to workspace number 6
+bindsym mod4+7 workspace number 7
+bindsym mod4+shift+7 move container to workspace number 7
+bindsym mod4+8 workspace number 8
+bindsym mod4+shift+8 move container to workspace number 8
+bindsym mod4+9 workspace number 9
+bindsym mod4+shift+9 move container to workspace number 9

@@ -59,4 +59,3 @@ git clone https://github.com/doebutsu/dotfiles.git --branch gentoo
 cd dotfiles/
 bash install.sh
 ```
----
